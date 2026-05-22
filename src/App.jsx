@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ID, Query } from "appwrite";
-import { appwriteConfig, databases, isAppwriteConfigured } from "./appwrite";
+import { appwriteConfig, databases } from "./appwrite";
 import "./App.css";
 
 function getAppwriteErrorMessage(error, fallback) {
@@ -19,9 +19,7 @@ function App() {
   const [newTaskText, setNewTaskText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const shellRef = useRef(null);
-  const [errorMessage, setErrorMessage] = useState(
-    isAppwriteConfigured ? "" : "Missing Appwrite environment variables.",
-  );
+  const [errorMessage, setErrorMessage] = useState("");
   const completedTasks = tasks.filter((task) => task.isDone).length;
   const activeTasks = tasks.length - completedTasks;
 
@@ -59,15 +57,13 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (isAppwriteConfigured) {
-      fetchTasks();
-    }
+    fetchTasks();
   }, [fetchTasks]);
 
   const handleAddTask = async (event) => {
     event.preventDefault();
     const title = newTaskText.trim();
-    if (!title || !isAppwriteConfigured) return;
+    if (!title) return;
 
     setErrorMessage("");
 
@@ -193,7 +189,6 @@ function App() {
           <button
             type="submit"
             className="cyber-button"
-            disabled={!isAppwriteConfigured}
           >
             ADD
           </button>
