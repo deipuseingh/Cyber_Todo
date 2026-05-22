@@ -573,38 +573,101 @@
 @media (max-width: 640px) {
   .app-shell {
     align-items: start;
-    padding-top: 26px;
+    padding: 14px 10px;
   }
 
   .cyber-container {
-    width: min(94vw, 520px);
-    padding: 20px;
+    width: min(94vw, 420px);
+    padding: 14px;
     transform: rotateX(4deg) rotateY(-2deg) translateZ(12px);
   }
 
   .title {
-    font-size: 2rem;
+    margin-bottom: 14px;
+    font-size: 1.55rem;
   }
 
   .panel-chrome {
     flex-direction: column;
     gap: 4px;
+    margin-bottom: 12px;
+    font-size: 0.58rem;
   }
 
   .input-group {
     grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .cyber-input {
+    padding: 10px 12px;
+    font-size: 0.82rem;
   }
 
   .cyber-button {
     width: 100%;
+    min-height: 38px;
+    padding: 9px 16px;
+    font-size: 0.8rem;
   }
 
   .status-deck {
     grid-template-columns: 1fr;
+    gap: 7px;
+    margin-bottom: 14px;
   }
 
   .status-deck div {
-    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 38px;
+    padding: 8px 10px;
+  }
+
+  .status-value {
+    font-size: 1.1rem;
+  }
+
+  .status-label {
+    margin-top: 0;
+    font-size: 0.58rem;
+  }
+
+  .task-list {
+    gap: 8px;
+  }
+
+  .task-item {
+    min-height: 48px;
+    padding: 8px 10px;
+    gap: 8px;
+  }
+
+  .task-content {
+    gap: 8px;
+  }
+
+  .checkbox {
+    font-size: 0.78rem;
+  }
+
+  .task-title {
+    font-size: 0.82rem;
+  }
+
+  .delete-button {
+    width: 44px;
+    height: 28px;
+    font-size: 0.62rem;
+  }
+
+  .loading-text,
+  .empty-text,
+  .error-text {
+    padding: 12px;
+    font-size: 0.78rem;
   }
 
   .holo-core {
