@@ -158,7 +158,7 @@ function App() {
       <section className="cyber-container" aria-label="Cyber todo list">
         <div className="panel-chrome">
           <span>SYS:TASK_MATRIX</span>
-          <span>APPWRITE:ONLINE</span>
+          <span>CYBER:ONLINE</span>
         </div>
 
         <h1 className="animate-glitch title">CYBER_TODO</h1>
